@@ -70,8 +70,7 @@
             6.call-id：每个对话的唯一标识unique id for this call；
             7.content-type：说明信息格式Content-Type：application/SDP；
             8.content-length：信息体长度Content-Length:346;
-            9.subject（国标）：媒体流发送者ID：序列号　媒体流接收者ID：序列号；
-            
+            9.subject（国标）：媒体流发送者ID：序列号　媒体流接收者ID：序列号；            
     *SDP协议
         SDP的主要用途：协商流的发送地址：端口号，接收地址：端口号，媒体格式等信息；
     *RTP/RTCP协议
@@ -79,4 +78,6 @@
         RTSP协议在国标中主要实现流的源目的地址两端的保活；
     *MANSRTSP协议
         国标中主要用于录像回放的控制（快放/慢放/暂停/继续/拖拽）；
-        
+    *MANSCDP协议
+        MANSCDP协议完全是国标自定义的，主要是通过SIP协议的MESSAGE方法接收，协议采用XML方法定义；
+        按功能分四类：控制Control，查询Query，通知Notify，应答Respone；
