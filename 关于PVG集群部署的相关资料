@@ -1,1 +1,2 @@
-
+1.经典PVG架构最小单元：中心管理服务器（cms+SIPGateway）+媒体转发服务器（fs）+国标设备接入服务（pausip）；
+2.CMS（中心管理服务，Center Manage Server）
