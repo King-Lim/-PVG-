@@ -49,5 +49,13 @@
         HTTP与RTSP相比，HTTP请求由客户机发送，服务器响应；使用RTSP时，客户机和服务器均可发出INVITE，即RTSP可以是双向的；
         RTSP是用来控制声音或影像的多媒体串流协议，并允许同时多个串流需求控制；
     *SIP协议
-        SIP协议本身提供五个功能：终端定位、用户鉴权、通讯协商、建立会话、管理会话
-        重点字段：
+        SIP协议本身提供五个功能：终端定位、用户鉴权、通讯协商、建立会话、管理会话；
+        重点字段：request-line的INVITE方法、To字段、From字段、Subject字段、Content-type字段；
+        【SIP协议的几种方法】
+        1.REGISTER：注册/注销，当注册有效期expire字段等于0时表示注销；
+        2.开流相关方法；
+        INVITE：发起会话请求
+        ACK：会话建立成功
+        BYE：结束会话
+        3.SUBSCRIBE/NOTIFY：订阅与通知（所有订阅与通知拥有相同的call-id）；
+        4.
