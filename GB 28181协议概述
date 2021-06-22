@@ -52,10 +52,26 @@
         SIP协议本身提供五个功能：终端定位、用户鉴权、通讯协商、建立会话、管理会话；
         重点字段：request-line的INVITE方法、To字段、From字段、Subject字段、Content-type字段；
         【SIP协议的几种方法】
-        1.REGISTER：注册/注销，当注册有效期expire字段等于0时表示注销；
-        2.开流相关方法；
-        INVITE：发起会话请求
-        ACK：会话建立成功
-        BYE：结束会话
-        3.SUBSCRIBE/NOTIFY：订阅与通知（所有订阅与通知拥有相同的call-id）；
-        4.
+            1.REGISTER：注册/注销，当注册有效期expire字段等于0时表示注销；
+            2.开流相关方法；
+            INVITE：发起会话请求
+            ACK：会话建立成功
+            BYE：结束会话
+            3.SUBSCRIBE/NOTIFY：订阅与通知（所有订阅与通知拥有相同的call-id）；
+            4.INFO：目前主要应用于录像回放控制RTSP；
+            5.CANCEL：取消被挂起的请求，极少出现忽略；
+            6.MESSAGE：承载所有SIP扩展消息：国标自定义协议MANSCDP；   注：几乎所有的国标自定义XML消息都是通过MANSCDP方法承载
+        【SIP协议的信息头字段】
+            1.VIA： format：ADDRESS＋BRANCH经过的代理服务器；
+            2.contact：信令回复接收方sip uri（通常与FROM一致）；
+            3.to：目的方sip uri：<sip:31010000001320000012@3100000000>；
+            4.from：发起方sip uri：<sip:31000000002000000000@3100000000>；
+            5.cseq：序号+方法名“cseq：1INVITE”；
+            6.call-id：每个对话的唯一标识unique id for this call；
+            7.content-type：说明信息格式Content-Type：application/SDP；
+            8.content-length：信息体长度Content-Length:346;
+            9.subject（国标）：媒体流发送者ID：序列号　媒体流接收者ID：序列号；
+            
+    *SDP协议
+        SDP的主要用途：协商流的发送地址：端口号，接收地址：端口号，媒体格式等信息；
+        
